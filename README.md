@@ -1,27 +1,42 @@
 # Bastián Castro Nofal — personal website
 
-This is a simple modular static site for GitHub Pages.
+A modular static site for GitHub Pages, with a minimal editorial style inspired by Moira Weigel's archived personal website.
 
 ## File structure
 
 ```text
-index.html              # Main skeleton: header, navigation, footer, section loaders
-sections/home.html      # Home content
-sections/research.html  # Research content
-assets/css/styles.css   # Visual style
-assets/js/main.js       # Loads sections and updates navigation
-assets/img/profile.jpg  # Your local photo
+index.html              # Main skeleton: metadata, header, navigation, footer, section loaders
+sections/home.html      # Home / biography content
+sections/research.html  # Publications and working papers
+assets/css/styles.css   # Typography, spacing, layout, and responsive design
+assets/js/main.js       # Loads sections and updates active navigation
+assets/img/profile.jpg  # Your local profile photo
 robots.txt              # Search engine crawling instructions
 sitemap.xml             # Search engine sitemap
 ```
 
 ## How to edit
 
-- To edit your bio: change `sections/home.html`.
-- To edit papers: change `sections/research.html`.
-- To change colors, spacing, fonts, or layout: change `assets/css/styles.css`.
-- To change the photo: upload your image to `assets/img/` and either name it `profile.jpg` or edit the `src` in `sections/home.html`.
+- Edit your bio and profile links in `sections/home.html`.
+- Edit publications and working papers in `sections/research.html`.
+- Edit typography, spacing, colors, or the photo size in `assets/css/styles.css`.
+- If your uploaded photo has another name, either rename it to `assets/img/profile.jpg` or change the `src` in `sections/home.html`.
+- Replace `TU_ID` in the Google Scholar link with your actual Scholar ID.
 
-## Important
+## GitHub Pages
 
-Because the site uses JavaScript `fetch()` to load sections, opening `index.html` directly from your computer may not show the sections. It works once published on GitHub Pages. For local preview, use VS Code Live Server or run a small local server.
+This version is configured for:
+
+```text
+https://bcastronofal.github.io/
+```
+
+If you later use a custom domain, update `index.html`, `robots.txt`, and `sitemap.xml` with that domain.
+
+## Preview note
+
+Because the site uses JavaScript `fetch()` to load sections, opening `index.html` directly by double-clicking may not show the sections. It works once published on GitHub Pages. For local preview, use VS Code Live Server or run:
+
+```bash
+python -m http.server
+```

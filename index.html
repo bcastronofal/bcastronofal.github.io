@@ -3,31 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bastián Castro Nofal</title>
-  <meta name="description" content="Personal academic website of Bastián Castro Nofal." />
+
+  <title>Bastián Castro Nofal | Bastian Castro Nofal</title>
+  <meta name="description" content="Personal academic website of Bastián Castro Nofal, also written Bastian Castro Nofal. Economist working on public economics, taxation, inequality, and public policy." />
+  <link rel="canonical" href="https://bcastronofal.github.io/" />
+
+  <meta property="og:title" content="Bastián Castro Nofal" />
+  <meta property="og:description" content="Economist working on public economics, taxation, inequality, and public policy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bcastronofal.github.io/" />
+
+  <!-- Minimal, old-web editorial typography inspired by Moira Weigel's archived site. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bastián Castro Nofal",
+    "alternateName": "Bastian Castro Nofal",
+    "url": "https://bcastronofal.github.io/",
+    "jobTitle": "Economist",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Chile"
+    },
+    "sameAs": [
+      "https://github.com/bcastronofal",
+      "https://x.com/bcastron"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#home">Bastián Castro Nofal</a>
-      <div class="menu">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#research">Research</a>
-      </div>
-    </nav>
-  </header>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-title" href="#home">bastián castro nofal</a>
 
-  <main>
-    <div data-include="sections/home.html"></div>
-    <div data-include="sections/research.html"></div>
-  </main>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">home</a>
+        <a class="nav-link" href="#research">research</a>
+        <a href="https://github.com/bcastronofal" target="_blank" rel="noopener">github</a>
+        <a href="https://x.com/bcastron" target="_blank" rel="noopener">twitter</a>
+      </nav>
+    </header>
 
-  <footer>
-    <div class="footer-inner">
-      © <span id="year"></span> Bastián Castro Nofal
-    </div>
-  </footer>
+    <main class="site-main">
+      <div data-include="sections/home.html"></div>
+      <div data-include="sections/research.html"></div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> bastián castro nofal</span>
+    </footer>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
