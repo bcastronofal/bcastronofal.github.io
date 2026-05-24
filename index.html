@@ -5,258 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bastián Castro Nofal</title>
   <meta name="description" content="Personal academic website of Bastián Castro Nofal." />
-  <style>
-    :root {
-      --text: #202124;
-      --muted: #5f6368;
-      --line: #dadce0;
-      --bg: #ffffff;
-      --soft-bg: #f8f9fa;
-      --link: #1a73e8;
-      --max-width: 980px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover { text-decoration: underline; }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(8px);
-    }
-
-    .nav {
-      width: min(100% - 32px, var(--max-width));
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 72px;
-      gap: 24px;
-    }
-
-    .brand {
-      font-size: 1.15rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
-
-    .menu {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-      font-size: 0.98rem;
-    }
-
-    .menu a {
-      color: var(--text);
-      padding: 8px 0;
-      border-bottom: 2px solid transparent;
-    }
-
-    .menu a:hover,
-    .menu a.active {
-      text-decoration: none;
-      border-bottom-color: var(--text);
-    }
-
-    main {
-      width: min(100% - 32px, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 52px;
-      align-items: center;
-      padding: 78px 0 72px;
-    }
-
-    .portrait {
-      width: 240px;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 2px;
-      box-shadow: 0 8px 24px rgba(60, 64, 67, 0.16);
-    }
-
-    h1 {
-      font-size: clamp(2.15rem, 4vw, 3.35rem);
-      line-height: 1.12;
-      font-weight: 400;
-      margin: 0 0 28px;
-    }
-
-    .lead {
-      font-size: 1.05rem;
-      max-width: 690px;
-      margin: 0 0 18px;
-    }
-
-    .section {
-      padding: 64px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section h2 {
-      font-size: 1.65rem;
-      font-weight: 400;
-      margin: 0 0 28px;
-    }
-
-    .paper-list {
-      display: grid;
-      gap: 24px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .paper {
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .paper:last-child { border-bottom: none; }
-
-    .paper-title {
-      font-size: 1.02rem;
-      margin: 0 0 6px;
-      font-weight: 500;
-    }
-
-    .paper-authors,
-    .paper-venue {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .paper-venue { margin-top: 4px; }
-
-    footer {
-      border-top: 1px solid var(--line);
-      background: var(--soft-bg);
-      margin-top: 24px;
-    }
-
-    .footer-inner {
-      width: min(100% - 32px, var(--max-width));
-      margin: 0 auto;
-      padding: 28px 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 760px) {
-      .nav { min-height: 64px; }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 48px 0 56px;
-      }
-
-      .portrait {
-        width: 190px;
-        height: 190px;
-      }
-
-      .menu { gap: 14px; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#home">Bastián Castro Nofal</a>
       <div class="menu">
-        <a class="active" href="#home">Home</a>
-        <a href="#research">Research</a>
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#research">Research</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div>
-        <img
-          class="portrait"
-          src="bcn_1x1.jpg"
-          alt="Portrait of Bastián Castro Nofal"
-        />
-      </div>
-      <div>
-        <h1>Bastián Castro Nofal</h1>
-        <p class="lead">I'm an economist working as an Instructor and Research Assistant at the Department of Management Control and Information Systems of the University of Chile.</p>
-        <p class="lead">My research interests are mainly in Public Economics and Public Finance, with a focus on optimal taxation, income and wealth inequality, and public policy. I am also interested in Labor Economics.</p>
-        <p class="lead">My CV is available <a href="https://www.dropbox.com/scl/fi/2oy39t9upwbfhj3tmixo5/CV_Castro_Nofal.pdf" target="_blank" rel="noopener">here</a>, and you can contact me at bcastron [at] fen [dot] uchile [dot] cl.</p>
-      </div>
-    </section>
-
-    <section id="research" class="section">
-      <h2>Published papers</h2>
-      <ul class="paper-list">
-        <li class="paper">
-          <p class="paper-title"><a href="https://www.dropbox.com/scl/fi/tkq2h2ffi7f9ztrs3gvee/JPUBE_Manuscript.pdf" target="_blank" rel="noopener">From Housing Gains to Pension Losses: Micro-Macro Integration to Reveal Wealth Inequality Dynamics in Chile</a></p>
-          <p class="paper-authors">with Ignacio Flores and Pablo Gutiérrez Cubillos</p>
-          <p class="paper-venue"><a href="https://doi.org/10.1016/j.jpubeco.2026.105665" target="_blank" rel="noopener">Journal of Public Economics, 259 (2026) 105665</a></p>
-        </li>
-        <li class="paper">
-          <p class="paper-title"><a href="https://www.dropbox.com/scl/fi/o5rycjcmhzvp5qv92wdv2/EAP_Manuscript.pdf" target="_blank" rel="noopener">Carbon Tax as an Automatic Stabilizer in a Commodity-Producing Small Open Economy</a></p>
-          <p class="paper-authors">with Cristian Espinosa and Pablo Gutiérrez Cubillos</p>
-          <p class="paper-venue"><a href="https://doi.org/10.1016/j.eap.2024.12.034" target="_blank" rel="noopener">Economic Analysis and Policy, 85 (2025) 835-853</a></p>
-        </li>
-        <li class="paper">
-          <p class="paper-title"><a href="https://www.dropbox.com/scl/fi/1ye6ic6mzn9ogzpqqx1k7/FRL_Manuscript.pdf" target="_blank" rel="noopener">Stock returns and tax progressivity</a></p>
-          <p class="paper-authors">with Juan Díaz, Pablo Gutiérrez Cubillos and Erwin Hansen</p>
-          <p class="paper-venue"><a href="https://doi.org/10.1016/j.frl.2024.106175" target="_blank" rel="noopener">Finance Research Letters, 69 (2024) 106175</a></p>
-        </li>
-        <li class="paper">
-          <p class="paper-title"><a href="https://www.dropbox.com/scl/fi/0c5iiv4p58csxo77ymkml/EL_Manuscript.pdf" target="_blank" rel="noopener">On the robustness of the relationship between tax progressivity, growth, and inequality in the US</a></p>
-          <p class="paper-authors">with Juan Díaz, Pablo Gutiérrez Cubillos and Erwin Hansen</p>
-          <p class="paper-venue"><a href="https://doi.org/10.1016/j.econlet.2024.111807" target="_blank" rel="noopener">Economics Letters, 241 (2024) 111807</a></p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Working papers</h2>
-      <ul class="paper-list">
-        <li class="paper">
-          <p class="paper-title"><a href="https://www.ssrn.com/abstract=6327518" target="_blank" rel="noopener">The Impact of Gender Quotas on Applications and Enrollment in STEM Higher Education Programs: The Case of the “Más Mujeres Científicas” (+MC) Policy in Chile</a></p>
-          <p class="paper-authors">with Juan Díaz, Carolina Méndez Vargas and Humberto Santos</p>
-        </li>
-        <li class="paper">
-          <p class="paper-title">Optimal Tax Progressivity under Tax Avoidance</p>
-          <p class="paper-authors">with Pablo Gutiérrez Cubillos and Alejandro Micco</p>
-        </li>
-        <li class="paper">
-          <p class="paper-title">Tax-arbitraged consumption through the firm</p>
-          <p class="paper-authors">with Juan Díaz, Pablo Gutiérrez Cubillos, Christian Ferrada and David Leite</p>
-        </li>
-      </ul>
-    </section>
+    <div data-include="sections/home.html"></div>
+    <div data-include="sections/research.html"></div>
   </main>
 
   <footer>
@@ -265,8 +29,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
