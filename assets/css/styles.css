@@ -187,7 +187,7 @@ p {
 }
 
 .portrait {
-  width: 210px;
+  width: 300px;
   height: auto;
 }
 
@@ -251,7 +251,7 @@ p {
   }
 
   .home-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) 300px;
     gap: 28px;
   }
 
